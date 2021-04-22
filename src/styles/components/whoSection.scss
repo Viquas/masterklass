@@ -1,0 +1,167 @@
+.ws{
+    color:$white;
+    display: flex;
+    flex-direction: row;
+    @include media("<=1080px") {
+       flex-direction: column;
+    }
+    .ws-left{
+        background:#EDD8C5;
+        flex:1;
+        padding: 40px 50px;
+        border-radius: 20px;
+        margin-right: 30px;
+        @include media("<=1080px") {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        @include media("<=phone") {
+            padding: 30px;
+        }
+        .ws-left-top{
+            width: 80%;
+            @include media("<=1080px") {
+                width: 100%;
+            }
+            h1{
+                font-size: 30px;
+                color: #CA5726; 
+                line-height: 2.5rem;
+                @include media("<=1080px") {
+                   line-height: 2rem;
+                }
+            }
+            h3{
+                color: #AC887C;
+                font-weight: 400;
+                font-size: 15px;
+                letter-spacing: 0.4px;
+                margin:60px 0px;
+                @include media("<=1080px") {
+                    margin:20px 0px;
+                }
+            }
+            p{
+                color:#CA5726;
+                font-size: 15px;
+                line-height: 1.3;
+                top: 70px;
+                position: relative;
+                @include media("<=1080px") {
+                    top:20px
+                }
+                @include media("<=phone") {
+                    top:0px
+                }
+            }
+        }
+    }
+    .ws-right{
+        flex:2;
+        background:#C5E8ED;
+        padding: 40px 50px;
+        border-radius: 20px;
+        @include media("<=tablet") {
+            padding: 30px;
+        }
+        .ws-top-right{
+            width: 50%;
+            @include media("<=1080px") {
+                width: 100%;
+                padding: 0px;
+            }
+            
+            h1{
+                color: #318C99;
+                font-size: 30px;
+                line-height: 2.5rem;
+            }   
+            h3{
+                color:#77A6AD;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.2px;
+                margin: 30px 0px;
+                position: relative;
+                width: 80%;
+                left:0px;
+            } 
+        }
+        .batchSection{
+            display: flex;
+            flex-direction: row;
+            @include media("<=tablet") {
+               flex-direction: column;
+            }
+            .batch{
+                background-color: #DCFAFE;
+                padding: 20px 30px;
+                flex:1;
+                border-radius: 20px;
+                margin-right: 20px;
+                @include media("<=phone") {
+                    padding: 20px;
+                }
+                @include media("<=tablet") {
+                    margin-bottom: 20px;
+                 }
+                &:nth-child(2) {
+                    background-color:#8BC2CA;
+                }
+                .badge{
+                    color: #77A6AD;
+                    font-size: 12px;
+                    background-color: white;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    right:10px;
+                    float: right;
+                    top:-30px;
+                    position: relative;
+                    text-transform: none;
+                }
+                h2{
+                    color: #82BBC3;
+                    font-size: 24px;
+                }
+                .title2{
+                    color: white;
+                }
+                p{
+                    color: #689096;
+                    width: 80%;
+                    font-size: 16px;
+                    letter-spacing: 0.3px;
+                    font-weight: 400;
+                    margin-bottom: 50px;
+                    @include media("<=phone") {
+                        width: 100%;
+                    }
+                }
+                .detail2{
+                    color: #4A7F87;
+                }
+                div{
+                    color: #000;
+                    font-size: 14px;
+                    letter-spacing: 0.3px;
+                    font-weight: 800;
+                    margin-bottom: 15px;
+                    span{
+                        
+                        color: #689096;
+                        font-weight: 600;
+                        top: 5px;
+                    }
+                }
+                .prerequiste2{
+                    color: #fff;
+                    span{
+                        color: #318C99;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.fullWidthDark{
+    background-color: #101720;
+    color: white;
+    letter-spacing: 1px;
+    height: 500px;
+    @include media("<=1080px") {
+        height: 800px;
+    }
+    @include media("<=phone") {
+        height: 850px;
+    }
+}
+
+
+.ts{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-content: center;
+    height: 300px;
+    @include media("<=1080px") {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .ts-media{
+        position: absolute;
+        z-index: 1;
+        width:40%;
+       
+        @include media("<=1080px") {
+            width:100%;
+            position: relative;
+            height: 500px;
+        }
+        .slick-slider{
+            box-sizing: border-box;
+            .slick-list{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                .client__image{
+                    height: 500px;
+                    width: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position:center;
+                    @include media("<=1080px") {
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+    .ts-quote{
+        height: 300px;
+        margin-left: auto;
+        z-index: 1;
+        width:50%;
+        border: none;
+        padding: 80px 60px;
+        @include media("<=1080px") {
+            width:auto;
+            position: relative;
+            bottom: 0px;
+            margin-left: 0px;
+            padding: 40px;
+            height: 250px;
+        }
+        @include media("<=phone") {
+            padding: 30px 20px;
+        }
+        quotes{
+           p.text-white{
+               color: white;
+               z-index: 4;
+           }
+        }
+    }
+    .client-name{
+        margin-top: 100px;
+        color: #BCD674;
+        font-size: 25px;
+        @include media("<=1080px") {
+            margin-top: 40px;
+        }
+        @include media("<=phone") {
+            margin-top: 10px;
+        }
+    }
+    .client-details{
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 300;
+        span{
+            color: 313E50;
+            margin: auto 15px;
+            margin-right: 20px;
+            font-size: 20px;
+            border-right: 2px solid #313E50;
+        }
+    }
+}

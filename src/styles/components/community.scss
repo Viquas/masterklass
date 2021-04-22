@@ -1,0 +1,55 @@
+.pistaBackground{
+    background-color: #D6DCD1;
+    padding: 80px 30px;
+    @include media("<=tablet") {
+        padding: 40px 30px;
+    }
+    .community{
+        background-color: white;
+        padding: 50px 0px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        .slick-slide{
+            height: 130px;
+            .slick-slide-image{
+                width: 100px;
+                border-radius:50%;
+                box-shadow: 0 5px 5px -5px;
+                transition: 0.5s;
+                @include media("<=tablet") {
+                    width: 80px;
+                }
+                &:hover {
+                    box-shadow: 0 6px 9px -5px;
+                }
+            }
+        }
+        h1{
+            text-align: center;
+            padding: 40px 30px;
+            margin-bottom: 0px;
+            @include media("<=phone") {
+                font-size: 25px;
+                margin-top: 0px;
+                padding: 20px 30px;
+            }
+        }
+        button{
+            background-color: $pista-green;
+            padding: 15px 30px;
+            border-radius: 33px;
+            color: $green;
+            font-weight: bold;
+            border:none;
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+            text-align: center;
+            margin-bottom: 10px;
+            left: 50%;
+            position: relative;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.whiteBackground{
+    background-color: white;
+    padding: 80px 30px;
+    @include media("<=phone") {
+        padding: 40px 20px !important;
+    }
+    .offers{
+        background-color: #E9E3DD;
+        padding: 50px;
+        border-radius: 20px;
+        @include media("<=phone") {
+            padding: 40px 20px;
+        }
+        h1{
+            color: #C98F55;
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+        .offer-bottom{
+           margin-top: 100px;
+           display: flex;
+           justify-content:space-between; 
+           @include media("<=tablet") {
+            flex-direction:column;
+            margin-top: 10px;
+           }
+           .o-points{
+               position: relative;
+               width: 350px;
+              @include media("<=desktop") {
+                width: 300px;
+              }
+              @include media("<=1080px") {
+                width: 250px;
+              }
+               .number{
+                   color: #DBD0C5;
+                   font-size: 72px;
+                   font-weight: bold;
+                   @include media("<=phone") {
+                    font-size: 55px;
+                   }
+               }
+               h3{
+                   margin-top: 0px;
+               }
+               p{
+                   color:#827467;
+               }
+           }
+        }
+    }
+    .faq-zone{
+        display: flex;
+        margin-top: 80px;
+        @include media("<=tablet") {
+            flex-direction:column;
+            margin-top: 50px;
+        }
+        .faq-left{
+            flex:1;
+            .gray-text{
+                color: #BFBFBF;
+                font-weight: 700;
+                font-size: 32px;
+            }
+            h1{
+                font-weight: 300;
+                width:300px;
+                font-size: 40px;
+            }
+        }
+        .faq-right{
+            flex:2;
+            .faq-row-wrapper {
+                .faq-title {
+                }
+            
+                .faq-body {
+                    .faq-row {
+                        .row-title {
+                        }
+                        .closed{
+                            .row-title-text{
+                                color: #707070;
+                            }
+                            .icon-wrapper{
+                                &:after {
+                                    content:"+";
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                        .expanded{
+                            .row-title-text{
+                               
+                            }
+                            .icon-wrapper{
+                                &:after {
+                                    content:"-";
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                        .row-content {
+                            .row-content-text {
+                                font-size: 20;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

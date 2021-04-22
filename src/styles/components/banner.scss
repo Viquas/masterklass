@@ -1,0 +1,93 @@
+.banner{
+    height:80vh; //fallback option
+    height: calc((var(--vh, 1vh) * 100) - 208px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include media("<=phone") {
+        height: calc((var(--vh, 1vh) * 100));        
+    }
+    .banner-left{
+        flex:1;
+        h2{
+            font-size: 2.8rem;
+                color: $white;
+                line-height: 3rem;
+                font-weight: 600;
+                z-index: 10;
+            .banner-title{
+                margin-bottom: 8px;
+                height: 62px;
+                position: relative;
+                overflow: hidden;
+                span{
+                     position: absolute;
+                     @include media("<=desktop") {
+                        font-size: 40px;
+                        line-height: 55px;
+                    }
+                    @include media("<=phone") {
+                       
+                    }
+                
+                }
+            }
+        }
+        .banner-input{
+            margin-top: 60px;
+            input{
+                width: 50%;
+                border:none;
+                background: rgba($color: #1d1d1d, $alpha: 1);
+                height: 40px;
+                padding:5px 30px;
+                border-radius: 30px;
+            }
+            button{
+                background-color: $pista-green;
+                padding: 15px 30px;
+                border-radius: 33px;
+                color: $green;
+                font-weight: bold;
+                border:none;
+                font-size: 1rem;
+                letter-spacing: 0.05rem;
+                margin-left: -120px;
+            }
+        }
+        .scroll-box{
+            background: #e5e5e5;
+            padding: 20px 20px;
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            right: 50%;
+            bottom: 0px;
+            @include media("<=tablet") {
+               right:0px;
+             }
+            svg{
+                
+            }
+            span{
+                margin-left: 20px;
+            }
+        }
+    }
+    .banner-right{
+        flex:1;
+        height: calc((var(--vh, 1vh) * 100) - 208px);
+        @include media("<=tablet") {
+           display: none;
+        }
+        video{
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            height: inherit;
+            height: calc((var(--vh, 1vh) * 100) - 208px);
+            object-fit: cover;
+        }
+    }
+}
